@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+<div class="section" id="skill">
+  <div class="container">
+<!--    <div class="h4 text-center mb-4 title">Leetcode</div>-->
+    <div class="h6 mb-4 title">Leetcode Total Solved :: <span class="num" [attr.data-val]="leetData.totalSolved">000</span> </div>
+    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+      <div class="card-body">
+        <div class="row row-pb-md">
+          <div style="display: block">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" >
+            <div class="progress-container progress-primary">
+              <span class="progress-badge">EASY SOLVED :: <span class="num" [attr.data-val]="leetData.easySolved">000</span> </span>
+<!--              <i class="adjust" [ngClass]="skill.iconURL"></i>-->
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                     data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': (easyRatio) * 100 + '%' , 'background': 'green'}"></div>
+                <!-- <span class="progress-value">{{skill.score}}</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" >
+            <div class="progress-container progress-primary">
+              <span class="progress-badge">MEDIUM SOLVED :: <span class="num" [attr.data-val]="leetData.mediumSolved">000</span> </span>
+              <!--              <i class="adjust" [ngClass]="skill.iconURL"></i>-->
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                     data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': (mediumRatio) * 100 + '%' ,'background': 'orange'}"></div>
+                <!-- <span class="progress-value">{{skill.score}}</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" >
+            <div class="progress-container progress-primary">
+              <span class="progress-badge">HARD SOLVED :: <span class="num" [attr.data-val]="leetData.hardSolved">000</span> </span>
+              <!--              <i class="adjust" [ngClass]="skill.iconURL"></i>-->
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                     data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': (hardRatio) * 100 + '%' , 'background': 'red'}"></div>
+                <!-- <span class="progress-value">{{skill.score}}</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

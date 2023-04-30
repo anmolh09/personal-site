@@ -1,0 +1,32 @@
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+#total {
+  animation: counter 2s ease-in-out;
+  counter-set: num var(--num);
+}
+#total::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
+}
+span.num{
+  text-align: right;
+}
+span.text {
+  color: #e0e0e0;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 400;
+  line-height: 0;
+}
