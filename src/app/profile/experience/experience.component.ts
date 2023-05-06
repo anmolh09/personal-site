@@ -25,7 +25,6 @@ export class ExperienceComponent implements OnInit {
 'Integrated with 3rd party APIs to fetch and transform JSON data to a suitable format for use by the frontend',
 'Took part in setting up code coverage reports using SonarQube.'];
 
-    // tslint:disable-next-line:max-line-length
     this.citius.tasks =
       ['Reduced costs by implementing features of a licensed library using OpenSource ReactJS libraries to perform functions like showing nested hierarchy of projects as a table with functionality display context menu on right click, toggle on click',
   'Customized Material-UI autocomplete library in ReactJS to add features like click to show more results, make matching characters of input to bold in the list of results and minimum length of input',

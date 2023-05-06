@@ -11,15 +11,16 @@ html, body { height: 100%; }
   width: 100%;
 }
 
-.here { 
+.here {
   z-index: 1;
 //   color: hsl(357, 85%, 80%);
+  bottom: 50px;
   color: whitesmoke;
   text-align: center;
-  font-size: 60px; 
+  font-size: 60px;
   font-family: 'Sacramento', cursive;
   letter-spacing: -1px;
-  
+
 }
 
 /* Set the psuedoelement beneath parent */
@@ -32,5 +33,5 @@ body {
     text-align: center;
     color:#fff;
   }
-  
+
   * { color:#fff; text-decoration: none;}

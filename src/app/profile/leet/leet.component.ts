@@ -9,13 +9,17 @@ import { HttpClient } from '@angular/common/http';
 export class LeetComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private http: HttpClient) { }
 
+  url = "https://leetcode-stats-api.herokuapp.com/anmolh09"
   leetData;
   easyRatio;
   mediumRatio;
   hardRatio;
 
   ngOnInit() {
-    this.http.get('assets/data/appData.json').subscribe((res) => {
+    this.http
+      .get('assets/data/appData.json')
+      // .get(this.url)
+      .subscribe((res) => {
       this.leetData = res;
       console.log(this.leetData);
       console.log(this.leetData.easySolved);
@@ -29,13 +33,14 @@ export class LeetComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     const valueDisplays = document.querySelectorAll('.num');
     const interval = 4000;
+
     valueDisplays.forEach((valueDisplay) => {
       console.log(valueDisplay);
+
       let startValue = 0;
-      // const endValue = this.leetData.totalSolved;
       const endValue = parseInt(valueDisplay.getAttribute('data-val'), 10);
-      console.log(endValue);
       const duration = Math.floor(interval / endValue);
+
       const counter = setInterval(() => {
         startValue += 1;
         valueDisplay.textContent = String(startValue);
@@ -43,6 +48,7 @@ export class LeetComponent implements OnInit, AfterViewInit, OnDestroy {
           clearInterval(counter);
         }
       }, duration);
+
     });
   }
   ngOnDestroy() {
