@@ -17,8 +17,8 @@ export class LeetComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     this.http
-      .get('assets/data/appData.json')
-      // .get(this.url)
+      // .get('assets/data/appData.json')
+      .get(this.url)
       .subscribe((res) => {
       this.leetData = res;
       console.log(this.leetData);
